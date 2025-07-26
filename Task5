@@ -1,0 +1,20 @@
+
+
+javascript
+// Global scope
+let globalVar = "I am global";
+
+function showScope() {
+  // Local scope
+  let localVar = "I am local";
+
+  console.log("Inside function:");
+  console.log(globalVar); // Accessible
+  console.log(localVar);  // Accessible
+}
+
+showScope();
+
+console.log("Outside function:");
+console.log(globalVar);   // Accessible
+// console.log(localVar); // Uncaught ReferenceError: localVar is not defined
