@@ -1,0 +1,28 @@
+
+
+javascript
+const tasks = [];
+
+// Function to print all current tasks
+const printAllTasks = () => {
+  console.log("Current tasks:");
+  tasks.forEach((task, index) => {
+    console.log(`index + 1.{task}`);
+  });
+};
+
+// Function to add a single task
+const addTask = (task, callback) => {
+  tasks.push(task);
+  callback();
+};
+
+// 4) Function to add multiple tasks using rest parameter
+const addMultipleTasks = (callback, ...newTasks) => {
+  tasks.push(...newTasks);
+  callback();
+};
+
+// Demo
+addTask("Wash dishes", printAllTasks);
+addMultipleTasks(printAllTasks, "Buy groceries", "Call mom", "Study JavaScript");
